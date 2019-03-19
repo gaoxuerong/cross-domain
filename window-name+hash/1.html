@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <iframe src="http://localhost:4000/3.html" onload="load()" id="frame"></iframe>
+</body>
+<script>
+  let first = true
+  function load(){
+    let frm = document.getElementById('frame')
+    if(first){
+      frm.src="http://localhost:3000/2.html"
+      first = false
+    }else{
+      console.log(frm.contentWindow.name)
+    }
+  }
+</script>
+</html>
